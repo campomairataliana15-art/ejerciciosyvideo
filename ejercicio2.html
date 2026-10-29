@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda y carrito de compras</title>
+    <link rel="stylesheet" href="ejercicio2.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Tienda y carrito de compras</h1>
+        <p>Los productos físicos tienen un envío de $2.000 por unidad.</p>
+        <h2>Registrar producto</h2>
+
+        <label>Identificador:</label>
+        <input type="text" id="identificador">
+        <label>Nombre:</label>
+        <input type="text" id="nombre">
+        <label>Precio:</label>
+        <input type="number" id="precio">
+        <label>Cantidad:</label>
+        <input type="number" id="cantidad">
+        <label>Tipo de producto:</label>
+
+        <select id="tipo">
+            <option value="Fisico">Físico</option>
+            <option value="Digital">Digital</option>
+        </select>
+        <button onclick="agregarProducto()">
+            Agregar producto
+        </button>
+        <p id="mensaje"></p>
+        <h2>Productos del carrito</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Identificador</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+        </table>
+        <h2 id="total">Total: $0</h2>
+    </div>
+
+    <script src="ejercicio2.js"></script>
+
+</body>
+</html>
